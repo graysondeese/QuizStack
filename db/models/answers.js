@@ -11,6 +11,6 @@ module.exports = function(sequelize, DataTypes){
             allowNull: false
         }
     });
-    Answer.belongsTo(questions(sequelize, DataTypes));
+    Answer.belongsTo(questions(sequelize, DataTypes), {foreignKey:"questionId"});
     return Answer;
 }
