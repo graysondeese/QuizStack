@@ -8,15 +8,17 @@ var router = express.Router();
 // route for homepage
 router.get("/", function(req, res) {
     
-  });
+});
 
 // route for quiz
 router.get("/quiz", function(req, res) {
     
-  });
+});
 
 // route for highscores
 router.get("/highscores", function(req, res) {
     
-  });
+});
+
+module.exports = router;
   
