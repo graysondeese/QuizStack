@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+        <title>Quiz Stack</title>
+    </head>
+    <body 
+    style="background-image: url('./assets/images/noise-bg.png');background-repeat: repeat;">
+       
+    
+        <nav class="navbar navbar-expand-md navbar-light bg-light py-0 my-0">
+            
+            <div class="container">
+            
+                <h2>
+                    <a id="quizStack" class="navbar-brand text-dark h-100 px-3" href="#">Quiz Stack</a>
+                </h2>
+              
+                <div id="navbarTogglerDemo02">
+                    <ul class="navbar-nav ml-auto mt-2 mt-md-0">
+                        <li>
+                            <a class="navbar-brand text-dark h-100 px-3 text-white">Test your luck: </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <br />
+            <div class="row">
+                <main id="card-wrapper" class="col-md-12">
+                    <div id="default" class="card">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">
+                                Code Quiz Challenge!
+                            </h5>
+                            <hr />
+                            <!--Row for Instructions-->
+                            <div class="d-flex">
+                                <div class="row mx-1 justify-content-center">
+                                    <div class="col-12 col-md-10 col-lg-8 text-center">
+                                        <p>
+                                            Try to answer the following
+                                            code-related questions within the
+                                            time limit. Keep in mind that an
+                                            incorrect answer will penalize your
+                                            score by 10 seconds!
+                                        </p>
+                                        <br />
+                                        <!--Start Button here-->
+                                        <div class="col text-center">
+                                            <button id="startBtn" class="btn btn-success">
+                                                Start Quiz!
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="row">
+                        <div class="col-10 ml-5 text-muted font-italic">
+                            <p id="RightResult"></p>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- Footer -->
+                    <footer>
+                        <div class="card row fixed-bottom bg-dark border-top border-info border-bottom-0"
+                            style="border-width: 3px !important;">
+                            <div class="card-body text-center">
+                                <span class="text-white-50">&copy;Ryan Carr, Grayson Deese, Christopher, Brett Rushing</span>
+                            </div>
+                        </div>
+                    </footer>
+                </main>
+            </div>
+        </div>
+        <script src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+            
+    </body>
+</html>
