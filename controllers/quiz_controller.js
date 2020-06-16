@@ -6,9 +6,7 @@ var quiz = require("../models/question.js");
 var router = express.Router();
 
 // route for homepage
-router.get("/", function(req, res) {
-    res.render("index");
-});
+router.get("/", (req, res) => res.render("index"));
 
 // route for quiz
 router.get("/quiz", function(req, res) {
