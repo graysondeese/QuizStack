@@ -16,7 +16,10 @@
   },
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "lint": "eslint **/*.js --quiet",
+    "fix": "eslint **/*.js --fix",
+    "test": "none"
   },
   "repository": {
     "type": "git",
