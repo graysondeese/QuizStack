@@ -1,7 +1,7 @@
 
-var express = require("express");
-var PORT = process.env.PORT || 8080;
-var app = express();
+let express = require("express");
+let PORT = process.env.PORT || 8080;
+let app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static("public"));
@@ -11,21 +11,21 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Set Handlebars.
-var exphbs = require("express-handlebars");
+let exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
-var routes = require("./controllers/quiz_controller.js");
+let routes = require("./controllers/quiz_controller.js");
 
-var db = require("./db/models");
+let db = require("./db/models");
 
 app.use(routes);
 
 // Start our server so that it can begin listening to client requests.
-db.sequelize.sync().then(function() {
-    app.listen(PORT, function() {
-      console.log("App listening on PORT " + PORT);
-    });
+db.sequelize.sync().then(function () {
+  app.listen(PORT, function () {
+    console.log("App listening on PORT " + PORT);
+  });
 });
