@@ -7,8 +7,13 @@ var router = express.Router();
 
 // route for homepage
 router.get("/", function(req, res) {
+    quiz.findAll(function(data) {
+    var hbsObject = {
+        question: data
+    };
     console.log(hbsObject);
     res.render("index", hbsObject);
+    })
     
 });
 
