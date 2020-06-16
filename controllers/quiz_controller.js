@@ -9,14 +9,11 @@ var router = express.Router();
 router.get("/", (req, res) => res.render("index"));
 
 // route for quiz
-router.get("/quiz", function(req, res) {
-    
-});
+router.get("/quiz", (req, res) => res.render("quiz"));
 
 // route for highscores
-router.get("/highscores", function(req, res) {
-    
-});
+router.get("/highscores", (req, res) => res.render("highscores"));
+
 
 module.exports = router;
   
