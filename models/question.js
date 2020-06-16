@@ -10,7 +10,10 @@ const findOne = async (id) => {
     ],
   });
 
+  if(findAnswersArr.length === 0) return;
+
   let question = {
+    id,
     questionText: findAnswersArr[0].Question.questionText,
     answers: [],
   };
@@ -24,4 +27,4 @@ const findOne = async (id) => {
   });
   return question;
 };
-module.exports = findOne;
+module.exports = {findOne};
