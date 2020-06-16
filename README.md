@@ -1,6 +1,11 @@
 # QuizStack
 A simple quiz application using relevant subject matter from a Full Stack Developer bootcamp.
 
+## User Story
+As a user 
+I want a flashcard game to learn more about coding
+So that I can become a better Developer 
+
 ## Table of Contents
 
   * [QuizStack](#quizstack)
