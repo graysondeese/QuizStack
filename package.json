@@ -19,7 +19,7 @@
     "dev": "nodemon server.js",
     "lint": "eslint **/*.js --quiet",
     "fix": "eslint **/*.js --fix",
-    "test": "none"
+    "test": "exit 0"
   },
   "repository": {
     "type": "git",
