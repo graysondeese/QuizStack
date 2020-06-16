@@ -9,28 +9,13 @@ var router = express.Router();
 router.get('/',(req, res) => res.render('index'));
 
 // route for quiz
-router.get('/quiz', function(req, res) {
-    
-});
+
+router.get("/quiz", (req, res) => res.render("quiz"));
 
 // route for highscores
-router.get('/highscores', function(req, res) {
-    
+router.get("/highscores", (req, res) => res.render("highscores"));
 
 
-// quiz.update({
-//     highscore: ''
-
-// }, condition, function(result) {
-//     if (result.changedRows == 0) {
-//       // If no rows were changed, then the ID must not exist, so 404
-//       return res.status(404).end();
-//     } else {
-      
-//       res.status(200).end();
-//     }
-//   });
-});
 
 // Access the leaderboard
 // app.get('/players', async function(req, res) {
