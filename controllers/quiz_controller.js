@@ -1,7 +1,7 @@
 // Requiring express
 var express = require("express");
 // importing the model quiz.js
-var quiz = require("../models/quiz.js");
+//var quiz = require("../models/quiz.js");
 // Defining routes on router
 var router = express.Router();
 
