@@ -1,7 +1,9 @@
 #quizStack:hover{
 cursor: pointer;
 color: green;
-font-weight: 700;
+}
+.ghlink {
+    color: gray;
 }
 .ghlink:hover{
     color: green;
