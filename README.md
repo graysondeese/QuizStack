@@ -1,5 +1,5 @@
-# Quiz Stack
-![GitHub](https://img.shields.io/travis/com/graysondeese/QuizStack) <br>
+# QuizStack
+![FullStack](https://user-images.githubusercontent.com/61035701/84943225-1028d480-b0b2-11ea-8742-e49bc271dcfc.png) ![Travis](https://img.shields.io/travis/com/graysondeese/QuizStack?logo=travis)<br>
 A simple quiz application using relevant subject matter from a Full Stack Developer bootcamp.
 
 ## User Story
@@ -61,7 +61,8 @@ The following APIs were used in the development of this assignment.
 * **MomentJs API** - (https://momentjs.com/docs/)
 
 ## Coming-Soon
-![quiz-stack](https://user-images.githubusercontent.com/61035701/84731875-393d4e00-af68-11ea-9776-154bf2cab202.png)
+
+![quiz-stack](https://user-images.githubusercontent.com/61035701/84941802-e078cd00-b0af-11ea-8e78-26b7d132af23.png)
 
 ## Deployed Application
 <a href="https://quiz-stack.herokuapp.com/">Quiz Stack</a>
