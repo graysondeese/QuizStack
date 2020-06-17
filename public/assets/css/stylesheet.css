@@ -1,3 +1,11 @@
-html{
-    background-color: aquamarine;
+#quizStack:hover{
+cursor: pointer;
+color: green;
+}
+.ghlink {
+    color: gray;
+}
+.ghlink:hover{
+    color: green;
+    text-decoration: none;
 }
