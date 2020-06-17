@@ -1,3 +1,4 @@
+![GitHub](https://img.shields.io/travis/com/graysondeese/QuizStack)
 ## Quiz Stack
 A simple quiz application using relevant subject matter from a Full Stack Developer bootcamp.
 
