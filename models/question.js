@@ -10,7 +10,9 @@ const findOne = async (id) => {
     ],
   });
 
-  if(findAnswersArr.length === 0) return;
+  if(findAnswersArr.length === 0) {
+    return;
+  }
 
   let question = {
     id,
