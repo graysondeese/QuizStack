@@ -5,8 +5,12 @@
         <div>
             <div class="row mx-1 ">
                 <div class="col-12 col-md-10 col-lg-12 text-center">
-                    <div id="highScoreTable"></div>
-                    {{highscore}}
+                    <div id="highScoreTable">
+                    {{#each highscores}}
+                    <p>{{username}}</p>
+                    <p>{{score}}</p>
+                    {{/each}}
+                    </div>
                     <!--Go Home here-->
                     <div class="col text-center">
                         <button id="goHomeBtn" class="btn btn-success" onclick="redirect()">
