@@ -3,13 +3,13 @@ A simple quiz application using relevant subject matter from a Full Stack Develo
 
 ## User Story
 ```
-As a user 
+AS A user 
 ``` 
 ```
-I want a flashcard game to learn more about coding
+I WANT a flashcard game to learn more about coding
 ```
 ```
-So that I can become a better Developer 
+SO THAT I can become a better Developer 
 ```
 ## Table of Contents
 
