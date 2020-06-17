@@ -11,5 +11,6 @@ const findAll = async () => {
     });
 }
 
+const save = async (data) => db.Highscore.create(data);
 
-module.exports = { findAll };
+module.exports = { findAll, save };

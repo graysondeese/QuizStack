@@ -2,13 +2,19 @@
     <div class="card-header">SQL - Question {{id}}</div>
 
     <div class="card-body">
-        <h5 class="card-title my-5">{{questionText}}</h5>
+        <h5 class="card-title my-3">{{questionText}}</h5>
         <p class="card-text">
+        <div class="row">
             {{#each answers}}
-                <a href="#" class="btn btn-primary" data-isCorrect="{{isCorrect}}">{{answerText}}</a>
+            <div class="col-12 col-lg-6 py-3">
+                <button class="btn btn-primary btn-block answer-button" data-iscorrect="{{isCorrect}}">{{answerText}}</button>
+            </div>
             {{/each}}
-        </p>   
+        </div>
+        </p>
     </div>
 
-    <div class="card-footer text-muted">Correct!</div>
+    <div id="answer-eval" class="card-footer font-weight-bold"></div>
 </div>
+<input id="question-id" type="hidden" value="{{id}}"></input>
+<script defer src="/assets/js/quiz.js"></script>

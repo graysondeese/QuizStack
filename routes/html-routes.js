@@ -1,8 +1,16 @@
 const router = require("express").Router();
-const question = require("../models/question");
+const questionModel = require("../models/question");
 
 // Api-Route
-router.get("/quiz/:id", async (req, res) => res.render("quiz", await question.findOne(req.params.id)));
+router.get("/quiz/:id", async (req, res) => {
+    let question = await questionModel.findOne(req.params.id);
+    if(question){
+        res.render("quiz", question);
+    }else{
+        res.render("quiz-end")
+    }
+    
+});
 
 // route for homepage
 router.get("/", (req, res) => res.render("index"));
