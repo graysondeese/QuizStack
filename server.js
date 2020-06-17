@@ -16,14 +16,12 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
-const routes = require("./controllers/quiz_controller.js");
 const apiRoutes = require("./routes/api-routes")
 const htmlRoutes = require("./routes/html-routes")
 
 const db = require("./db/models");
 
 app.use(htmlRoutes)
-app.use(routes);
 app.use(apiRoutes)
 
 // Start our server so that it can begin listening to client requests.
