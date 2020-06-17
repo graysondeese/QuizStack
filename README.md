@@ -4,7 +4,7 @@ A simple quiz application using relevant subject matter from a Full Stack Develo
 ## User Story
 ```
 As a user 
-```
+``` 
 ```
 I want a flashcard game to learn more about coding
 ```
