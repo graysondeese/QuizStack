@@ -21,4 +21,6 @@ router.post("/api/highscore", async (req, res) => {
 // highScore
 router.get("/api/highscore", async (req, res) => res.json(await highscore.findAll()));
 
+router.get("/api/quiz", async (req, res) => res.json(await question.generateQuiz()));
+
 module.exports = router;

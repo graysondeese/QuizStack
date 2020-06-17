@@ -33,7 +33,7 @@ const findOne = async (id) => {
 const add = async (data) => {
   const newQuestion = await db.Question.create({questionText: data.question});
   let newAnswers = [{answerText: data.correctAnswer, isCorrect: true, questionId: newQuestion.id}];
-  newAnswers = newAnswers.concat(data.answers.map((answer) => {
+  newAnswers = newAnswers.concat(data.answers.map(answer => {
     return {
       answerText: answer,
       isCorrect: false,
@@ -41,7 +41,12 @@ const add = async (data) => {
     };
   }));
 
-  return db.Answer.bulkCreate(newAnswers.filter((answer) => answer.answerText.trim()));
+  return db.Answer.bulkCreate(newAnswers.filter(answer => answer.answerText.trim()));
 };
 
-module.exports = { findOne, add };
+const generateQuiz = async () => {
+  let questions = await db.Question.findAll({ attributes: ["id"] });
+  return questions.map(question => question.id);
+};
+
+module.exports = { findOne, add, generateQuiz };

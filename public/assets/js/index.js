@@ -1,4 +1,9 @@
 $("#startBtn").click(() => {
-  localStorage.setItem("score",0);
-  window.location.href="/quiz/1";
+  localStorage.clear("score");
+  localStorage.clear("quiz");
+  $.get("/api/quiz").then((data) => {
+    let questionId = data.shift();
+    localStorage.setItem("quiz", JSON.stringify(data));
+    window.location.href = `/quiz/${questionId}`;
+  });
 });
