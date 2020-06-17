@@ -1,21 +1,18 @@
-# QuizStack
+## Quiz Stack
 A simple quiz application using relevant subject matter from a Full Stack Developer bootcamp.
 
 ## User Story
 ```
-AS A user 
-``` 
-```
-I WANT a flashcard game to learn more about coding
-```
-```
-SO THAT I can become a better Developer 
+AS A user,
+I WANT a quiz game to learn more about coding,
+SO THAT I can become a better Developer.
 ```
 ## Table of Contents
 
-  * [QuizStack](#quizstack)
+  * [Quiz Stack](#quiz-stack)
+  * [User Story](#user-story)
   * [Installation](#installation)
-  * [Usage](#use)
+  * [Usage](#Usage)
   * [Motivation](#motivation)
   * [Authors](#authors)
   * [Technologies](#technologies)
@@ -29,7 +26,7 @@ To install necessary dependencies, run the following command:
 ```
 npm i
 ```
-## use
+## Usage
 ```
 npm run start
 ```
@@ -66,5 +63,5 @@ The following APIs were used in the development of this assignment.
 ![quiz-stack](https://user-images.githubusercontent.com/61035701/84731875-393d4e00-af68-11ea-9776-154bf2cab202.png)
 
 ## Deployed Application
-<a href="https://quiz-stack.herokuapp.com/">Heroku</a>
+<a href="https://quiz-stack.herokuapp.com/">Quiz Stack</a>
 
