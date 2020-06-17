@@ -1,0 +1,25 @@
+<div id="default" class="card">
+    <div class="card-body">
+        <h5 class="card-title text-center">Submit Question</h5>
+        <hr />
+        <div class="row mx-1 ">
+            <form id="addQuestionForm" class="col-12">
+                <div class="form-group">
+                    <label for="QuestionText">Enter Question</label>
+                    <textarea id="QuestionText" name="question" class="form-control" placeholder="Question" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="text-success">Enter <strong>CORRECT</strong> answer in this box</label>
+                    <textarea name="correctAnswer" class="form-control answer" placeholder="Correct answer" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="text-danger">Enter <strong>WRONG</strong> answer in this box</label>
+                    <textarea name="answers" class="form-control" placeholder="wrong answer choice" required></textarea>
+                </div>
+                <button id="save" class="btn-primary rounded-pill float-right ml-2"><i class="fa fa-save"></i> Save Question</button>
+                <button id="addAnswer" type="button" class="btn-primary rounded-pill float-right"><i class="fa fa-plus-circle" aria-hidden="true"></i> Add an answer</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script defer src="/assets/js/add-question.js"></script>

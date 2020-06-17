@@ -29,4 +29,19 @@ const findOne = async (id) => {
   });
   return question;
 };
-module.exports = {findOne};
+
+const add = async (data) => {
+  const newQuestion = await db.Question.create({questionText: data.question});
+  let newAnswers = [{answerText: data.correctAnswer, isCorrect: true, questionId: newQuestion.id}];
+  newAnswers = newAnswers.concat(data.answers.map((answer) => {
+    return {
+      answerText: answer,
+      isCorrect: false,
+      questionId: newQuestion.id
+    };
+  }));
+
+  return db.Answer.bulkCreate(newAnswers.filter((answer) => answer.answerText.trim()));
+};
+
+module.exports = { findOne, add };

@@ -5,6 +5,8 @@ const highscore = require("../models/highscore");
 // Api-Route
 router.get("/api/question/:id", async (req, res) => res.json(await question.findOne(req.params.id)));
 
+router.post("/api/question", async (req, res) => res.send(await question.add(req.body)));
+
 // Save Highscore
 router.post("/api/highscore", async (req, res) => {
   try{

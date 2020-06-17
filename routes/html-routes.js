@@ -15,6 +15,9 @@ router.get("/quiz/:id", async (req, res) => {
 // route for homepage
 router.get("/", (req, res) => res.render("index"));
 
+// route for questions-submit
+router.get("/add-question", (req, res) => res.render("add-question"));
+
 // route for highscores
 router.get("/highscores", async (req, res) => res.render("highscores", await highscoreModel.findAll()));
 
