@@ -1,8 +1,8 @@
-html{
-    background-color: aquamarine;
+#quizStack:hover{
+cursor: pointer;
+color: green;
 }
-.highScoreTable {
-    width: 100%;
-    background-color: red;
-    height: 40px;
+.ghlink:hover{
+    color: green;
+    text-decoration: none;
 }
