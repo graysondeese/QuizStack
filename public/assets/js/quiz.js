@@ -14,5 +14,5 @@ $(".answer-button").click(function(){
     $("#answer-eval").text("Wrong").addClass("text-danger");
   }
 
-  setTimeout(() => window.location.href=`/quiz/${questionId}`, 500);
+  setTimeout(() => window.location.href=questionId ? `/quiz/${questionId}` : "/quiz-end", 500);
 });

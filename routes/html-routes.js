@@ -7,10 +7,11 @@ router.get("/quiz/:id", async (req, res) => {
   if(question){
     res.render("quiz", question);
   }else{
-    res.render("quiz-end");
+    res.render("index");
   }
-
 });
+
+router.get("/quiz-end", (req, res) => res.render("quiz-end"));
 
 // route for homepage
 router.get("/", (req, res) => res.render("index"));
