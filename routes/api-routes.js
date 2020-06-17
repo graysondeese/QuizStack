@@ -7,13 +7,13 @@ router.get("/api/question/:id", async (req, res) => res.json(await question.find
 
 // Save Highscore
 router.post("/api/highscore", async (req, res) => {
-    try{
-        await highscore.save(req.body);
-    }catch(error){
-        console.error(error);
-        res.sendStatus(500);
-    }
-    res.sendStatus(201);
+  try{
+    await highscore.save(req.body);
+  }catch(error){
+    console.error(error);
+    res.sendStatus(500);
+  }
+  res.sendStatus(201);
 });
 
 // highScore

@@ -3,13 +3,13 @@ const questionModel = require("../models/question");
 
 // Api-Route
 router.get("/quiz/:id", async (req, res) => {
-    let question = await questionModel.findOne(req.params.id);
-    if(question){
-        res.render("quiz", question);
-    }else{
-        res.render("quiz-end")
-    }
-    
+  let question = await questionModel.findOne(req.params.id);
+  if(question){
+    res.render("quiz", question);
+  }else{
+    res.render("quiz-end");
+  }
+
 });
 
 // route for homepage
