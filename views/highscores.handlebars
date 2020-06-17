@@ -5,15 +5,24 @@
         <div>
             <div class="row mx-1 ">
                 <div class="col-12 col-md-10 col-lg-12 text-center">
-                    <div id="highScoreTable"></div>
-                    {{highscore}}
+                    <div id="highScoreTable">
+                        <table class="table table-sm table-bordered text-center">
+                            <thead class="thead-light">
+                                <th>Initials</th>
+                                <th>Score</th>
+                            </thead>
+                            {{#each highscores}}
+                            <tr>
+                                <th>{{username}}</th>
+                                <th>{{score}}</th>
+                            </tr>
+                            {{/each}}
+                        </table>
+                    </div>
                     <!--Go Home here-->
                     <div class="col text-center">
-                        <button id="goHomeBtn" class="btn btn-success" onclick="redirect()">
+                        <button id="goHomeBtn" class="btn btn-success" onclick="window.location.href='/'">
                             Home
-                        </button>
-                        <button id="clearScoresBtn" class="btn btn-secondary">
-                            Clear Scores
                         </button>
                     </div>
                 </div>
