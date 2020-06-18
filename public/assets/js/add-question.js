@@ -1,3 +1,4 @@
+//Allows user to click on an answer
 $("#addAnswer").click(function (event) {
   event.preventDefault();
   $(`<div class="form-group">
@@ -6,6 +7,7 @@ $("#addAnswer").click(function (event) {
     </div>`).insertBefore($("#category"));
 });
 
+//Shows the question on the page
 $("#addQuestionForm").submit(function(event) {
   event.preventDefault();
   $.post("/api/question", $(this).serialize());

@@ -1,5 +1,6 @@
 const questions = require("./questions");
 
+//Sets answers table from Sequelize
 module.exports = function(sequelize, DataTypes){
   let Answer = sequelize.define("Answer", {
     answerText: {

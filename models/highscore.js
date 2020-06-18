@@ -1,5 +1,5 @@
 const db = require("../db/models");
-
+//Returns all scores posted on the highscore page and from highest to lowest
 const findAll = async () => {
   let highScoreArr = await db.Highscore.findAll({
     order:[
