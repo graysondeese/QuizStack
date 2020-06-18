@@ -3,7 +3,7 @@
 module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.createTable(
-      "categories",
+      "Categories",
       {
         id: {
           type: Sequelize.INTEGER,
@@ -23,13 +23,13 @@ module.exports = {
       },
       {},
     ).then(() => {
-      return queryInterface.addColumn("questions", "categoryId", Sequelize.INTEGER).then(() => {
-        return queryInterface.addConstraint("questions", {
+      return queryInterface.addColumn("Questions", "categoryId", Sequelize.INTEGER).then(() => {
+        return queryInterface.addConstraint("Questions", {
           type: "FOREIGN KEY",
           fields: ["categoryId"],
           name: "questions_ibfk_1",
           references: {
-            table: "categories",
+            table: "Categories",
             field: "id",
           },
         });
@@ -37,10 +37,10 @@ module.exports = {
     });
   },
 
-  down: (queryInterface, Sequelize) => {
-    return queryInterface.removeConstraint("questions", "questions_ibfk_1").then(() => {
-      return queryInterface.removeColumn("questions", "categoryId").then(() => {
-        return queryInterface.dropTable("categories");
+  down: (queryInterface) => {
+    return queryInterface.removeConstraint("Questions", "questions_ibfk_1").then(() => {
+      return queryInterface.removeColumn("Questions", "categoryId").then(() => {
+        return queryInterface.dropTable("Categories");
       });
     });
   }

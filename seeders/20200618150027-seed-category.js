@@ -2,7 +2,7 @@
 
 module.exports = {
   up: (queryInterface) => {
-    return queryInterface.bulkInsert("categories",
+    return queryInterface.bulkInsert("Categories",
       [
         { categoryText: "Uncategorized", createdAt: new Date(), updatedAt: new Date() },
         { categoryText: "SQL", createdAt: new Date(), updatedAt: new Date() },
@@ -13,14 +13,14 @@ module.exports = {
         { categoryText: "Bootstrap", createdAt: new Date(), updatedAt: new Date() },
         { categoryText: "Express.js", createdAt: new Date(), updatedAt: new Date() },
       ], {}).then(() => {
-      return queryInterface.sequelize.query("UPDATE questions SET categoryId = 2");
+      return queryInterface.sequelize.query("UPDATE Questions SET categoryId = 2");
     });
   },
 
   down: (queryInterface) => {
-    return queryInterface.removeConstraint("questions", "questions_ibfk_1").then(() => {
-      return queryInterface.sequelize.query("UPDATE questions SET categoryId = NULL").then(() => {
-        return queryInterface.bulkDelete("categories", null, {truncate: true, restartIdentity: true});
+    return queryInterface.removeConstraint("Questions", "questions_ibfk_1").then(() => {
+      return queryInterface.sequelize.query("UPDATE Questions SET categoryId = NULL").then(() => {
+        return queryInterface.bulkDelete("Categories", null, {truncate: true, restartIdentity: true});
       });
     });
   }

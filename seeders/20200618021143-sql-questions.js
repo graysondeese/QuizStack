@@ -59,15 +59,15 @@ module.exports = {
   },
 
   down: (queryInterface) => {
-    return queryInterface.bulkDelete("answers", null, {truncate: true, restartIdentity: true}).then(() => {
-      return queryInterface.removeConstraint("answers", "answers_ibfk_1").then(() => {
-        return queryInterface.bulkDelete("questions", null, {truncate: true, restartIdentity: true}).then(() => {
-          return queryInterface.addConstraint("answers", {
+    return queryInterface.bulkDelete("Answers", null, {truncate: true, restartIdentity: true}).then(() => {
+      return queryInterface.removeConstraint("Answers", "answers_ibfk_1").then(() => {
+        return queryInterface.bulkDelete("Questions", null, {truncate: true, restartIdentity: true}).then(() => {
+          return queryInterface.addConstraint("Answers", {
             type: "FOREIGN KEY",
             fields: ["questionId"],
             name: "answers_ibfk_1",
             references: {
-              table: "questions",
+              table: "Questions",
               field: "id",
             },
           });
