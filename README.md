@@ -61,6 +61,7 @@ The following APIs were used in the development of this assignment.
 * **MomentJs API** - (https://momentjs.com/docs/)
 
 ## Image
+
 ![quiz-stack](https://user-images.githubusercontent.com/61035701/84941802-e078cd00-b0af-11ea-8e78-26b7d132af23.png)
 
 ## Deployed Application
