@@ -1,3 +1,5 @@
+const Category = require("./categories");
+
 module.exports = function(sequelize, DataTypes){
   let Question = sequelize.define("Question", {
     questionText: {
@@ -5,5 +7,6 @@ module.exports = function(sequelize, DataTypes){
       allowNull: false,
     }
   });
+  Question.belongsTo(Category(sequelize, DataTypes), { foreignKey: "categoryId" });
   return Question;
 };

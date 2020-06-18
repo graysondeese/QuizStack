@@ -12,7 +12,8 @@
     "sequelize": "^5.21.13"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "sequelize-cli": "^5.5.1"
   },
   "scripts": {
     "start": "node server.js",
