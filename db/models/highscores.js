@@ -7,7 +7,7 @@ module.exports = function(sequelize, DataTypes){
     score:{
       type: DataTypes.INTEGER,
       allowNull: false
-    }
+    },
   });
   return highscore;
 };
