@@ -1,5 +1,7 @@
+//Calls the database models 
 const db = require("../db/models");
 
+// Asks database to find all answers to the questions provided
 const findOne = async (id) => {
   let findAnswersArr = await db.Answer.findAll({
     where: { questionId: id },
@@ -20,6 +22,7 @@ const findOne = async (id) => {
     answers: [],
   };
 
+  //Remapping sequelize model to a plane array
   findAnswersArr.forEach((answer) => {
     let a = {
       answerText: answer.answerText,
@@ -30,6 +33,7 @@ const findOne = async (id) => {
   return question;
 };
 
+//runs corrects answers in the background and returns when selected
 const add = async (data) => {
   const newQuestion = await db.Question.create({questionText: data.question});
   let newAnswers = [{answerText: data.correctAnswer, isCorrect: true, questionId: newQuestion.id}];
@@ -44,6 +48,7 @@ const add = async (data) => {
   return db.Answer.bulkCreate(newAnswers.filter(answer => answer.answerText.trim()));
 };
 
+//Generates the quiz format from the main page
 const generateQuiz = async () => {
   let questions = await db.Question.findAll({ attributes: ["id"] });
   return questions.map(question => question.id);
