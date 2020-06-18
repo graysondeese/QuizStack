@@ -22,7 +22,7 @@ const findOne = async (id) => {
     answers: [],
   };
 
-  //Finds correct answer once the user selects one of the possible answers
+  //Remapping sequelize model to a plane array
   findAnswersArr.forEach((answer) => {
     let a = {
       answerText: answer.answerText,
