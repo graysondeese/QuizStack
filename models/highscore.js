@@ -1,7 +1,11 @@
 const db = require("../db/models");
 
 const findAll = async () => {
-  let highScoreArr = await db.Highscore.findAll();
+  let highScoreArr = await db.Highscore.findAll({
+    order:[
+      ["score", "DESC"],
+    ],
+  });
   let viewModel = highScoreArr.map((highscore) => {
     return {
       username: highscore.username,
