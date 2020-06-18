@@ -9,4 +9,5 @@ $("#addAnswer").click(function (event) {
 $("#addQuestionForm").submit(function(event) {
   event.preventDefault();
   $.post("/api/question", $(this).serialize());
+  location.reload();
 });
