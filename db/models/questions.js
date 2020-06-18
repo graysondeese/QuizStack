@@ -1,3 +1,4 @@
+//Sets questions table from Sequelize
 module.exports = function(sequelize, DataTypes){
   let Question = sequelize.define("Question", {
     questionText: {

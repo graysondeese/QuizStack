@@ -1,3 +1,4 @@
+//Adds click function to the startbutton on the main page
 $("#startBtn").click(() => {
   localStorage.clear("score");
   localStorage.clear("quiz");
