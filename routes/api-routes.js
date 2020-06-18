@@ -22,7 +22,7 @@ router.post("/api/highscore", async (req, res) => {
 // highScore
 router.get("/api/highscore", async (req, res) => res.json(await highscore.findAll()));
 
-router.get("/api/quiz", async (req, res) => res.json(await question.generateQuiz()));
+router.get("/api/quiz", async (req, res) => res.json(await question.generateQuiz(req.query.category, req.query.questionLimit)));
 
 router.get("/api/category", async (req, res) => res.json(await category.findAll()));
 
