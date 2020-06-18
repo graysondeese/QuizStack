@@ -3,7 +3,7 @@ $("#addAnswer").click(function (event) {
   $(`<div class="form-group">
     <label class="text-danger">Enter <strong>WRONG</strong> answer in this box</label>
     <textarea name="answers" class="form-control" placeholder="wrong answer choice"></textarea>
-    </div>`).insertBefore($("#save"));
+    </div>`).insertBefore($("#category"));
 });
 
 $("#addQuestionForm").submit(function(event) {
