@@ -1,3 +1,4 @@
+//Sets highscore table from Sequelize
 module.exports = function(sequelize, DataTypes){
   let highscore = sequelize.define("Highscore", {
     username: {
