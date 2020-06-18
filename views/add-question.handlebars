@@ -16,6 +16,12 @@
                     <label class="text-danger">Enter <strong>WRONG</strong> answer in this box</label>
                     <textarea name="answers" class="form-control" placeholder="wrong answer choice" required></textarea>
                 </div>
+                <select id="category" name="category" class="custom-select custom-select-lg mb-3">
+                    <option selected>Choose a Category</option>
+                    {{#each categories}}
+                        <option value="{{id}}">{{categoryText}}</option>
+                    {{/each}}
+                </select>
                 <button id="save" class="btn-primary rounded-pill float-right ml-2"><i class="fa fa-save"></i> Save Question</button>
                 <button id="addAnswer" type="button" class="btn-primary rounded-pill float-right"><i class="fa fa-plus-circle" aria-hidden="true"></i> Add an answer</button>
             </form>

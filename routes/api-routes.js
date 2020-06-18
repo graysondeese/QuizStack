@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const question = require("../models/question");
 const highscore = require("../models/highscore");
+const category = require("../models/category");
 
 // Api-Route
 router.get("/api/question/:id", async (req, res) => res.json(await question.findOne(req.params.id)));
@@ -22,5 +23,7 @@ router.post("/api/highscore", async (req, res) => {
 router.get("/api/highscore", async (req, res) => res.json(await highscore.findAll()));
 
 router.get("/api/quiz", async (req, res) => res.json(await question.generateQuiz()));
+
+router.get("/api/category", async (req, res) => res.json(await category.findAll()));
 
 module.exports = router;

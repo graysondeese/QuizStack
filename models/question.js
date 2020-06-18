@@ -35,7 +35,7 @@ const findOne = async (id) => {
 
 //runs corrects answers in the background and returns when selected
 const add = async (data) => {
-  const newQuestion = await db.Question.create({questionText: data.question});
+  const newQuestion = await db.Question.create({questionText: data.question, categoryId: data.category});
   let newAnswers = [{answerText: data.correctAnswer, isCorrect: true, questionId: newQuestion.id}];
   newAnswers = newAnswers.concat(data.answers.map(answer => {
     return {
