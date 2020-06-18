@@ -16,3 +16,7 @@ $(".answer-button").click(function(){
 
   setTimeout(() => window.location.href=questionId ? `/quiz/${questionId}` : "/quiz-end", 500);
 });
+
+let totalQuestions = localStorage.getItem("totalQuestions");
+$("#question-count").text(totalQuestions);
+$("#questionId").text(totalQuestions - JSON.parse(localStorage.getItem("quiz")).length);
