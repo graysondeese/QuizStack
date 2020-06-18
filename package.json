@@ -9,14 +9,14 @@
     "express-handlebars": "^4.0.4",
     "handlebars": "^4.7.6",
     "mysql2": "^2.1.0",
-    "sequelize": "^5.21.13"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.4",
+    "sequelize": "^5.21.13",
     "sequelize-cli": "^5.5.1"
   },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
   "scripts": {
-    "start": "node server.js",
+    "start": "NODE_ENV=production node server.js",
     "dev": "nodemon server.js",
     "lint": "eslint --quiet",
     "fix": "eslint **/*.js --fix",
