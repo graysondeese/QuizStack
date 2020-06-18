@@ -18,7 +18,7 @@ SO THAT I can become a better Developer.
   * [Authors](#authors)
   * [Technologies](#technologies)
   * [APIs](#api-reference)
-  * [Coming Soon](#coming-soon)
+  * [Image](#image)
   * [Deployed Application](#deployed-application)
 
 ## Installation
@@ -60,7 +60,7 @@ If you have any questions feel free to contact any of the Authors.
 The following APIs were used in the development of this assignment.
 * **MomentJs API** - (https://momentjs.com/docs/)
 
-## Coming-Soon
+## Image
 
 ![quiz-stack](https://user-images.githubusercontent.com/61035701/84941802-e078cd00-b0af-11ea-8e78-26b7d132af23.png)
 
