@@ -23,20 +23,25 @@ module.exports = {
       },
       {},
     ).then(() => {
-      return queryInterface.bulkInsert("categories", [
-        {categoryText: "Uncategorized", createdAt: new Date(), updatedAt: new Date()},
-        {categoryText: "SQL", createdAt: new Date(), updatedAt: new Date()},
-      ]).then(() => {
-        return queryInterface.addColumn("questions", "categoryId", Sequelize.STRING).then(() => {
-          return queryInterface.sequelize.query("UPDATE questions SET categoryId = 2;");
+      return queryInterface.addColumn("questions", "categoryId", Sequelize.INTEGER).then(() => {
+        return queryInterface.addConstraint("questions", {
+          type: "FOREIGN KEY",
+          fields: ["categoryId"],
+          name: "questions_ibfk_1",
+          references: {
+            table: "categories",
+            field: "id",
+          },
         });
       });
     });
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.removeColumn("questions", "categoryId").then(() => {
-      return queryInterface.dropTable("categories");
+    return queryInterface.removeConstraint("questions", "questions_ibfk_1").then(() => {
+      return queryInterface.removeColumn("questions", "categoryId").then(() => {
+        return queryInterface.dropTable("categories");
+      });
     });
   }
 };
