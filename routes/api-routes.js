@@ -8,6 +8,8 @@ router.get("/api/question/:id", async (req, res) => res.json(await question.find
 
 router.post("/api/question", async (req, res) => res.send(await question.add(req.body)));
 
+router.delete("/api/question/:id", async (req, res) => res.json(await question.deleteOne(req.params.id)));
+
 // Save Highscore
 router.post("/api/highscore", async (req, res) => {
   try{
