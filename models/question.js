@@ -9,6 +9,11 @@ const findOne = async (id) => {
     include: [
       {
         model: db.Question,
+        include: [
+          {
+            model: db.Category
+          },
+        ],
       },
     ],
   });
@@ -20,6 +25,7 @@ const findOne = async (id) => {
   let question = {
     id,
     questionText: findAnswersArr[0].Question.questionText,
+    category: findAnswersArr[0].Question.Category.categoryText,
     answers: [],
   };
 
@@ -91,4 +97,17 @@ const generateQuiz = async (categories, questionLimit) => {
   return questions;
 };
 
-module.exports = { findOne, add, generateQuiz };
+const findAll = async () => {
+  const questions = await db.Question.findAll();
+  return {
+    questions: questions.map((question) => {
+      return {id: question.id, questionText: question.questionText};
+    })
+  };
+};
+
+const deleteOne = async (id) => {
+  await db.Answer.destroy({ where: {questionId: id} });
+  return db.Question.destroy({ where: {id} });
+};
+module.exports = { findOne, add, generateQuiz, findAll, deleteOne };

@@ -12,11 +12,21 @@
                         score.
                         Also, make sure you check out the leader board.
                     </p>
-                    <br />
-                    <!--Start Button here-->
-                    <div class="col text-center">
-                        <button id="startBtn" class="btn btn-success">Click to begin!</button>
-                    </div>
+                    <form id="dropdown">
+                        <select multiple name="category"
+                            data-style="bg-secondary text-light rounded-pill px-4 py-3 shadow-sm" 
+                            data-none-selected-text="Choose your categories" class="selectpicker w-100 mb-4">
+                            {{#each categories}}
+                                <option value="{{id}}">{{categoryText}}</option>
+                            {{/each}}
+                        </select>
+                        <br />
+                        <!--Start Button here-->
+                        <div class="col text-center">
+                            <button id="startBtn" type="button" class="btn btn-success">Click to begin!</button>
+                        </div>
+                    </form>
+
                 </div>
             </div>
         </div>
