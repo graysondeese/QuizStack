@@ -30,18 +30,22 @@ const findOne = async (id) => {
   };
 
   //Remapping sequelize model to a plane array
-  findAnswersArr.forEach((answer) => {
-    let a = {
-      answerText: answer.answerText,
-      isCorrect: answer.isCorrect,
-    };
-    question.answers.push(a);
-  });
+  while(findAnswersArr.length){
+    const random = Math.floor(Math.random()*findAnswersArr.length);
+    const randomAnswer = findAnswersArr.splice(random, 1)[0];
+    question.answers.push({
+      answerText: randomAnswer.answerText,
+      isCorrect: randomAnswer.isCorrect,
+    });
+  }
   return question;
 };
 
 //runs corrects answers in the background and returns when selected
 const add = async (data) => {
+  if(!Number.isInteger(data.category)){
+    data.category = 1;
+  }
   const newQuestion = await db.Question.create({ questionText: data.question, categoryId: data.category });
   let newAnswers = [{ answerText: data.correctAnswer, isCorrect: true, questionId: newQuestion.id }];
   newAnswers = newAnswers.concat(data.answers.map(answer => {
