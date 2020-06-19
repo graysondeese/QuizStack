@@ -8,10 +8,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "gcdv2bghv3dh12g8",
-    "password": "q87bvhg2nx9x4l6q",
-    "database": "inqaao4kgvs95w1p",
-    "host": "g3v9lgqa8h5nq05o.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "username": "k3mnc3pqw0sp278o",
+    "password": "qjlesip33wd4zvmc",
+    "database": "wt0k614hv5itwtga",
+    "host": "a5s42n4idx9husyc.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "port": 3306,
     "dialect": "mysql"
   }
