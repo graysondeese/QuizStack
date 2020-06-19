@@ -9,6 +9,11 @@ const findOne = async (id) => {
     include: [
       {
         model: db.Question,
+        include: [
+          {
+            model: db.Category
+          },
+        ],
       },
     ],
   });
@@ -20,6 +25,7 @@ const findOne = async (id) => {
   let question = {
     id,
     questionText: findAnswersArr[0].Question.questionText,
+    category: findAnswersArr[0].Question.Category.categoryText,
     answers: [],
   };
 
