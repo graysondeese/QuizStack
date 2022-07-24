@@ -9,7 +9,7 @@
     "express-handlebars": "^4.0.4",
     "handlebars": "^4.7.6",
     "mysql2": "^2.1.0",
-    "sequelize": "^5.21.13",
+    "sequelize": "^6.21.2",
     "sequelize-cli": "^5.5.1"
   },
   "devDependencies": {
